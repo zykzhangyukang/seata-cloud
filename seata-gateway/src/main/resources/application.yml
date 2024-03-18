@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: seata-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://192.168.2.97:8848
+        namespace: 7928319b-3bcd-44b5-8388-6fdfc9cf7095
+        group: seata
+    gateway:
+      routes:
+          - id: seata-order
+            uri: lb://seata-order
+            predicates:
+              - Path=/order/**
+            filters:
+              - StripPrefix=1
+
+          - id: seata-warehouse
+            uri: lb://seata-warehouse
+            predicates:
+              - Path=/warehouse/**
+            filters:
+              - StripPrefix=1
+  profiles:
+    active: WG4647
+server:
+  port: 7777

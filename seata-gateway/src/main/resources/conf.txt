@@ -1,0 +1,12 @@
+#  -Dspring.application.name=microservice-warehouse-amazon
+#  -Dspring.cloud.nacos.discovery.server-addr=http://192.168.2.97:8848
+#  -Dspring.cloud.nacos.discovery.namespace=7928319b-3bcd-44b5-8388-6fdfc9cf7095
+#  -Dspring.cloud.nacos.config.server-addr=http://192.168.2.97:8848
+#  -Dspring.cloud.nacos.config.namespace=7928319b-3bcd-44b5-8388-6fdfc9cf7095
+#  -Dspring.cloud.nacos.config.file-extension=yaml
+#  -Dspring.cloud.nacos.config.group=test
+#  -Dspring.cloud.nacos.config.shared-configs[0].group=test
+#  -Dspring.cloud.nacos.config.shared-configs[0].data-id=common-config.yml
+#  -Dspring.cloud.nacos.config.shared-configs[0].refresh=true
+#  -Ddubbo.registry.address=nacos://192.168.2.97:8848
+#  -Ddubbo.registry.parameters.namespace=7928319b-3bcd-44b5-8388-6fdfc9cf7095
